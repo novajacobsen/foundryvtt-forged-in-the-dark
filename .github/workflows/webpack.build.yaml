@@ -25,4 +25,4 @@ jobs:
         REPO: git@github.com:owner/repo.git
         BRANCH: build
         FOLDER: dist
-        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY }}
+        SSH_PRIVATE_KEY: ${{ secrets.GITHUB_TOKEN }}
