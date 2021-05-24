@@ -41,7 +41,7 @@
     }
   ],
   "url": "https://github.com/NovaJacobsen/foundryvtt-blades-in-the-dark",
-  "manifest": "https://github.com/NovaJacobsen/foundryvtt-blades-in-the-dark/master/static/system.json",
+  "manifest": "https://github.com/NovaJacobsen/foundryvtt-blades-in-the-dark/blob/master/static/system.json",
   "download": "https://codeload.github.com/NovaJacobsen/foundryvtt-blades-in-the-dark/zip/refs/heads/build",
   "packs": [
     {
