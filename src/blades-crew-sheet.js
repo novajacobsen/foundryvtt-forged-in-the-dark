@@ -1,5 +1,6 @@
 
-import { BladesSheet } from "./blades-sheet.js";
+import { BladesSheet } from "./blades-sheet.ts";
+import { BladesHelpers } from "./blades-helpers.ts";
 
 /**
  * @extends {BladesSheet}

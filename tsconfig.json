@@ -9,6 +9,7 @@
         "forceConsistentCasingInFileNames": true,
         "rootDir": "src",
         "outDir": "build",
+        "noImplicitAny": false,
         "moduleResolution": "node",
         "lib": [
             "ESNext.String",
@@ -29,6 +30,7 @@
         "./tests/",
         "./node_modules/",
         "./dist/",
-        "./build/"
+        "./build/",
+        "webpack.config.js"
       ],
 }

@@ -46,7 +46,7 @@ export class BladesHelpers {
             case "addition":
               mergeObject(
                 logic_update,
-                {[expression.attribute]: Number(BladesHelpers.getNestedProperty(entity, prefix + expression.attribute)) + expression.value},
+                {[expression.attribute]: Number(BladesHelpers.getNestedProperty(entity, eval("prefix") + expression.attribute)) + expression.value} as any,
                 {insertKeys: true}
               );
             break;
@@ -55,7 +55,7 @@ export class BladesHelpers {
             case "attribute_change":
               mergeObject(
                 logic_update,
-                {[expression.attribute]: expression.value},
+                {[expression.attribute]: expression.value} as any,
                 {insertKeys: true}
               );
             break;
@@ -92,14 +92,15 @@ export class BladesHelpers {
         var entity_data = entity.data;
 
         logic.forEach(expression => {
+          console.log(eval("prefix"));
           // Different logic behav. dep on operator.
           switch (expression.operator) {
-
+            
             // Subtract when removing.
             case "addition":
               mergeObject(
                 logic_update,
-                {[expression.attribute]: Number(BladesHelpers.getNestedProperty(entity, prefix + expression.attribute)) - expression.value},
+                {[expression.attribute]: Number(BladesHelpers.getNestedProperty(entity, eval("prefix") + expression.attribute)) - expression.value} as any,
                 {insertKeys: true}
               );
             break;
@@ -112,7 +113,7 @@ export class BladesHelpers {
 
               mergeObject(
                 logic_update,
-                {[expression.attribute]: default_name},
+                {[expression.attribute]: default_name} as any,
 			        	{insertKeys: true}
               );
 
@@ -159,7 +160,7 @@ export class BladesHelpers {
    * @param {string} item_type
    * @param {Object} game
    */
-  static async getAllItemsByType(item_type, game) {
+  static async getAllItemsByType(item_type, game): Promise<any> {
 
     let list_of_items = [];
     let game_items = [];
@@ -187,7 +188,8 @@ export class BladesHelpers {
    */
   static getAttributeLabel(attribute_name) {
         let attribute_labels = {};
-        const attributes = game.system.model.Actor.character.attributes;
+        game.system.model.Actor
+        const attributes = (game.system.model.Actor.character as any).attributes;
 
         for (var attibute_name in attributes) {
           attribute_labels[attibute_name] = attributes[attibute_name].label;
@@ -208,7 +210,7 @@ export class BladesHelpers {
    */
   static isAttributeAction(attribute_name) {
         let attribute_labels = {};
-        const attributes = game.system.model.Actor.character.attributes;
+        const attributes = (game.system.model.Actor.character as any).attributes;
         
         return !(attribute_name in attributes);
   }

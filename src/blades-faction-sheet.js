@@ -1,5 +1,5 @@
 
-import { BladesSheet } from "./blades-sheet.js";
+import { BladesSheet } from "./blades-sheet.ts";
 
 /**
  * @extends {BladesSheet}

@@ -1,3 +1,5 @@
+import { BladesHelpers } from "./blades-helpers.ts";
+
 /**
  * Roll Dice.
  * @param {int} dice_amount 
