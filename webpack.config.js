@@ -18,6 +18,16 @@ fs.writeFileSync("dist/styles/blades.css", sass.renderSync({
 module.exports = {
     entry: "./module/blades.js",
 
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            }
+        ],
+    },
+
     plugins: [
         new CopyPlugin({
             patterns: [
@@ -28,6 +38,10 @@ module.exports = {
             ]
         }),
     ],
+
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
 
     output: {
         filename: "blades.js",
