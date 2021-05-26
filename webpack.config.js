@@ -2,22 +2,27 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path")
 const sass = require("sass")
 const fs = require("fs")
+require("dotenv").config()
 
-if (!fs.existsSync("dist")) {
-    fs.mkdirSync("dist");
-    fs.mkdirSync("dist/styles");
+const out = process.env.FORGED_IN_THE_DARK_OUT_LOCATION || path.resolve(__dirname, "dist")
+
+if (!fs.existsSync(out)) {
+    fs.mkdirSync(out);
+    fs.mkdirSync(path.resolve(out, "styles"));
 }
 
 
-fs.writeFileSync("dist/styles/blades.css", sass.renderSync({
+fs.writeFileSync(path.resolve(out, "styles", "blades.css"), sass.renderSync({
     file: "scss/style.scss",
     sourceMap: true,
-    outFile: "dist/styles/blades.css"
+    outFile: path.resolve(out, "styles", "blades.css")
 }).css)
+
+
 
 module.exports = {
     entry: "./src/index.ts",
-
+    mode: process.env.MODE,
     module: {
         rules: [
             {
@@ -52,6 +57,6 @@ module.exports = {
 
     output: {
         filename: "index.js",
-        path: path.resolve(__dirname, "dist")
+        path: out
     }
 }
