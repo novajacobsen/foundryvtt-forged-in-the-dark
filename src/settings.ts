@@ -14,7 +14,7 @@ export const registerSystemSettings = function () {
         default: 0
     });
 
-    game.settings.register("blades-in-the-dark", "attributes", {
+    game.settings.register("forged-in-the-dark", "attributes", {
         name: "Attributes",
         scope: "world",
         type: Object,
@@ -25,7 +25,7 @@ export const registerSystemSettings = function () {
         }
     })
 
-    game.settings.registerMenu("blades-in-the-dark", "attributes", {
+    game.settings.registerMenu("forged-in-the-dark", "attributes", {
         name: "Attributes",
         label: "Configure Attributes",
         icon: "fas fa-edit",

@@ -13,7 +13,7 @@ export class AttributesEditor extends FormApplication<FormApplication.Options, {
 
     getData(): {number: number} {
         return {
-            number: game.settings.get("blades-in-the-dark", "groupCount") as number
+            number: game.settings.get("forged-in-the-dark", "groupCount") as number
         }
     }
 
@@ -21,7 +21,7 @@ export class AttributesEditor extends FormApplication<FormApplication.Options, {
         event.preventDefault();
         const a = formData?.groups
 
-        await game.settings.set("blades-in-the-dark", "groupCount", a);
+        await game.settings.set("forged-in-the-dark", "groupCount", a);
         return null
     }
 }

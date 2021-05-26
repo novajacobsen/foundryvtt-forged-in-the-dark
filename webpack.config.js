@@ -34,7 +34,7 @@ module.exports = {
                 test: /\.hbs/,
                 loader: "file-loader",
                 options: {
-                    publicPath: "systems/blades-in-the-dark/"
+                    publicPath: "systems/forged-in-the-dark/"
                 }
             }
         ],

@@ -77,7 +77,7 @@ Logic field is a json with params which allows to implement some logic when the 
 
 ## Credits
 - This work is based on Blades in the Dark (found at http://www.bladesinthedark.com/), product of One Seven Design, developed and authored by John Harper, and licensed for our use under the Creative Commons Attribution 3.0 Unported license (http://creativecommons.org/licenses/by/3.0/).
-- Some assets were taken from here (thank you  timdenee and joesinghaus): https://github.com/joesinghaus/Blades-in-the-Dark
+- Some assets were taken from here (thank you  timdenee and joesinghaus): https://github.com/joesinghaus/forged-in-the-dark
 
 
 [screenshot_all]: ./images/screenshot_all.png "screenshot_all"
