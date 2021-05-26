@@ -16,7 +16,7 @@ fs.writeFileSync("dist/styles/blades.css", sass.renderSync({
 }).css)
 
 module.exports = {
-    entry: "./src/blades.js",
+    entry: "./src/index.ts",
 
     module: {
         rules: [
@@ -24,6 +24,13 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.hbs/,
+                loader: "file-loader",
+                options: {
+                    publicPath: "systems/blades-in-the-dark/"
+                }
             }
         ],
     },
@@ -33,7 +40,7 @@ module.exports = {
             patterns: [
                 {
                     from: "static",
-                    to: "../"
+                    to: "./"
                 }
             ]
         }),
@@ -44,7 +51,7 @@ module.exports = {
     },
 
     output: {
-        filename: "blades.js",
-        path: path.resolve(__dirname, "dist", "module")
+        filename: "index.js",
+        path: path.resolve(__dirname, "dist")
     }
 }

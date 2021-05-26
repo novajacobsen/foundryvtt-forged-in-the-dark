@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "allowJs": true,
         "module": "es6",
         "strict": true,
         "esModuleInterop": true,
@@ -9,7 +8,6 @@
         "forceConsistentCasingInFileNames": true,
         "rootDir": "src",
         "outDir": "build",
-        "noImplicitAny": false,
         "moduleResolution": "node",
         "lib": [
             "ESNext.String",
@@ -31,6 +29,7 @@
         "./node_modules/",
         "./dist/",
         "./build/",
-        "webpack.config.js"
+        "webpack.config.js",
+        "_src"
       ],
 }
