@@ -7,7 +7,9 @@ require("dotenv").config()
 
 const out = process.env.FORGED_IN_THE_DARK_OUT_LOCATION || path.resolve(__dirname, "dist")
 
-fsUtils.rmdirsSync(out)
+if (fs.existsSync(out)) {
+    fsUtils.rmdirsSync(out)
+}
 
 fs.mkdirSync(out);
 fs.mkdirSync(path.resolve(out, "styles"));
