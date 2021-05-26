@@ -18,6 +18,8 @@ jobs:
       run: |
         npm install
         npm run build
+      env:
+        MODE: production
 
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
