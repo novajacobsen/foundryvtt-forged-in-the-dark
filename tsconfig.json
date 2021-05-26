@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "allowJs": true,
+    "module": "es6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "moduleResolution": "node",
+    "types": ["@league-of-foundry-developers/foundry-vtt-types"]
+  }
+}

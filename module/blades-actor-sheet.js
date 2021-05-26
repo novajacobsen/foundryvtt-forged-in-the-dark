@@ -11,7 +11,7 @@ export class BladesActorSheet extends BladesSheet {
 	static get defaultOptions() {
 	  return mergeObject(super.defaultOptions, {
   	  classes: ["blades-in-the-dark", "sheet", "actor"],
-  	  template: "systems/blades-in-the-dark/templates/actor-sheet.html",
+  	  template: "systems/blades-in-the-dark/templates/actor-sheet.hbs",
       width: 700,
       height: 970,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}]
@@ -23,6 +23,8 @@ export class BladesActorSheet extends BladesSheet {
   /** @override */
   getData() {
     var data = super.getData();
+    console.log(data)
+    console.log(game.settings)
 
     // Calculate Load
     let loadout = 0;
