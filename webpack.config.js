@@ -16,7 +16,7 @@ fs.writeFileSync("dist/styles/blades.css", sass.renderSync({
 }).css)
 
 module.exports = {
-    entry: "./module/blades.js",
+    entry: "./src/blades.js",
 
     module: {
         rules: [
