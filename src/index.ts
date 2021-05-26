@@ -1,8 +1,11 @@
+import { ForgedItem } from "./forged-item";
 import { ForgedItemSheet } from "./forged-item-sheet";
 import { preloadHandlebarsTemplates } from "./forged-templates";
 
 
 Hooks.once("init", async () => {
+    CONFIG.Item.entityClass = ForgedItem;
+
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("forged", ForgedItemSheet, { makeDefault: true });
 

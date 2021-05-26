@@ -42,12 +42,12 @@ export class ForgedItemSheet extends ItemSheet<{ isGm: boolean }> {
 
     /** @override */
     static get defaultOptions() {
-        return mergeObject(ItemSheet.defaultOptions, {
+        return Object.assign(ItemSheet.defaultOptions, {
             classes: ["blades-in-the-dark", "sheet", "item"],
             width: 560,
             height: 'auto',
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
-        });
+        })
     }
 
     /* -------------------------------------------- */
