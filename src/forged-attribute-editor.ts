@@ -1,7 +1,9 @@
+import attributes from "../templates/settings/attributes.hbs"
+
 export class AttributesEditor extends FormApplication<FormApplication.Options, {number: number}> {
     static get defaultOptions() {
         const options = FormApplication.defaultOptions;
-        options.template = "systems/blades-in-the-dark/templates/settings/attributes.hbs";
+        options.template = attributes
         return options;
     }
 
