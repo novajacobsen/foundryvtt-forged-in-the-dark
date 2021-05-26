@@ -12,10 +12,10 @@ if (!fs.existsSync(out)) {
 }
 
 
-fs.writeFileSync(path.resolve(out, "styles", "blades.css"), sass.renderSync({
+fs.writeFileSync(path.resolve(out, "styles", "styles.css"), sass.renderSync({
     file: "scss/style.scss",
     sourceMap: true,
-    outFile: path.resolve(out, "styles", "blades.css")
+    outFile: path.resolve(out, "styles", "styles.css")
 }).css)
 
 

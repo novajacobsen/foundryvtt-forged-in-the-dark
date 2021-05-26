@@ -1,6 +1,6 @@
 <form class="{{cssClass}} clock-block" autocomplete="off">
 
-    <div class="flexcol blades-clock-name-type">
+    <div class="flexcol forged-clock-name-type">
         {{#if editable}}
         <input type="text" id="{{actor._id}}-clock-name" name="name" value="{{actor.name}}">
 
@@ -14,7 +14,7 @@
         {{/if}}
 
         <div class="clocks clocks-{{data.type}}">
-            {{{blades-clock "data.value" data.type data.value item._id}}}
+            {{{forged-clock "data.value" data.type data.value item._id}}}
         </div>
     </div>
 </form>
