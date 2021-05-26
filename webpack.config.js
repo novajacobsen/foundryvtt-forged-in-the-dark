@@ -2,14 +2,18 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path")
 const sass = require("sass")
 const fs = require("fs")
+const fsUtils = require("nodejs-fs-utils");
 require("dotenv").config()
 
 const out = process.env.FORGED_IN_THE_DARK_OUT_LOCATION || path.resolve(__dirname, "dist")
 
-if (!fs.existsSync(out)) {
-    fs.mkdirSync(out);
-    fs.mkdirSync(path.resolve(out, "styles"));
-}
+fsUtils.rmdirsSync(out)
+
+fs.mkdirSync(out);
+fs.mkdirSync(path.resolve(out, "styles"));
+
+
+
 
 
 fs.writeFileSync(path.resolve(out, "styles", "styles.css"), sass.renderSync({
