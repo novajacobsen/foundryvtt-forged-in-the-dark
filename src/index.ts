@@ -1,8 +1,9 @@
-import * as import_test from "./import_test"
+import { preloadHandlebarsTemplates } from "./forged-templates";
 
-console.log(import_test.npcSheet)
 
-Hooks.once("init", () => {
+Hooks.once("init", async () => {
+    await preloadHandlebarsTemplates()
+
     // Is the value Turf side.
     Handlebars.registerHelper('is_turf_side', function (this: Handlebars.TemplateDelegate, value, options) {
         if (["left", "right", "top", "bottom"].includes(value)) {
