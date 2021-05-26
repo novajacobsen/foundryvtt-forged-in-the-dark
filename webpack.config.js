@@ -15,16 +15,11 @@ fs.mkdirSync(out);
 fs.mkdirSync(path.resolve(out, "styles"));
 
 
-
-
-
 fs.writeFileSync(path.resolve(out, "styles", "styles.css"), sass.renderSync({
     file: "scss/style.scss",
     sourceMap: true,
     outFile: path.resolve(out, "styles", "styles.css")
 }).css)
-
-
 
 module.exports = {
     entry: "./src/index.ts",

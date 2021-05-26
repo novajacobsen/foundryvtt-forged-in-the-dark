@@ -1,7 +1,11 @@
+import { ForgedItemSheet } from "./forged-item-sheet";
 import { preloadHandlebarsTemplates } from "./forged-templates";
 
 
 Hooks.once("init", async () => {
+    Items.unregisterSheet("core", ItemSheet);
+    Items.registerSheet("forged", ForgedItemSheet, { makeDefault: true });
+
     await preloadHandlebarsTemplates()
 
     // Is the value Turf side.
