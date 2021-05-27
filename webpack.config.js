@@ -7,6 +7,8 @@ require("dotenv").config()
 
 const out = process.env.FORGED_IN_THE_DARK_OUT_LOCATION || path.resolve(__dirname, "dist")
 
+const mode = process.env.MODE || "development"
+
 if (fs.existsSync(out)) {
     fsUtils.rmdirsSync(out)
 }
@@ -22,8 +24,8 @@ fs.writeFileSync(path.resolve(out, "styles", "styles.css"), sass.renderSync({
 }).css)
 
 module.exports = {
-    entry: "./src/index.ts",
-    mode: process.env.MODE,
+    entry: mode === "development" ? "./src/dev_index.ts" : "./src/index.ts",
+    mode,
     module: {
         rules: [
             {

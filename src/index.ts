@@ -2,7 +2,6 @@ import { ForgedItem } from "./forged-item";
 import { ForgedItemSheet } from "./forged-item-sheet";
 import { preloadHandlebarsTemplates } from "./forged-templates";
 
-
 Hooks.once("init", async () => {
     CONFIG.Item.entityClass = ForgedItem;
 
@@ -25,7 +24,7 @@ Hooks.once("init", async () => {
 
         let html = options.fn(this);
 
-        const selected  = Array.isArray(_selected) ? _selected : [_selected]
+        const selected = Array.isArray(_selected) ? _selected : [_selected]
 
         if (typeof selected !== 'undefined') {
             selected.forEach(selected_value => {
@@ -59,12 +58,12 @@ Hooks.once("init", async () => {
     });
 
     // NotEquals handlebar.
-    Handlebars.registerHelper('noteq', function(this: Handlebars.TemplateDelegate, a, b, options) {
+    Handlebars.registerHelper('noteq', function (this: Handlebars.TemplateDelegate, a, b, options) {
         return (a !== b) ? options.fn(this) : '';
     });
 
     // ReputationTurf handlebar.
-    Handlebars.registerHelper('repturf', function(this: Handlebars.TemplateDelegate, turfs_amount, options) {
+    Handlebars.registerHelper('repturf', function (this: Handlebars.TemplateDelegate, turfs_amount, options) {
         let html = options.fn(this);
         var turfs_amount_int = parseInt(turfs_amount);
 
@@ -80,7 +79,7 @@ Hooks.once("init", async () => {
         return html;
     });
 
-    Handlebars.registerHelper('crew_vault_coins', function(this: Handlebars.TemplateDelegate, max_coins, options) {
+    Handlebars.registerHelper('crew_vault_coins', function (this: Handlebars.TemplateDelegate, max_coins, options) {
 
         let html = options.fn(this);
         for (let i = 1; i <= max_coins; i++) {
@@ -91,7 +90,7 @@ Hooks.once("init", async () => {
         return html;
     });
 
-    Handlebars.registerHelper('crew_experience', function(this: Handlebars.TemplateDelegate, options) {
+    Handlebars.registerHelper('crew_experience', function (this: Handlebars.TemplateDelegate, options) {
 
         let html = options.fn(this);
         for (let i = 1; i <= 10; i++) {
