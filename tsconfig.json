@@ -18,7 +18,8 @@
             "scripthost",
         ],
         "types": [
-            "@league-of-foundry-developers/foundry-vtt-types"
+            "@league-of-foundry-developers/foundry-vtt-types",
+            "@types/mocha"
         ],
     },
     "include": [
