@@ -7,15 +7,17 @@ export enum RollResult {
 
 export class ForgedRoll {
   result: RollResult;
-  roll: number[];
+  dice: number[];
 
-  constructor(dice: number) {
-    const r = new Roll(dice === 0 ? "2d6kl" : `${dice}d6kh`);
-    r.roll();
+  constructor(diceCount: number) {
+    const d = new Die({
+      number: diceCount || 2,
+      faces: 6,
+      modifiers: [diceCount ? "kh" : "kl"],
+    }).evaluate();
+    this.dice = d.values;
 
-    this.roll = r.dice[0].results.map((d) => d.result);
-
-    switch (r.results[0]) {
+    switch (d.total) {
       case 1:
       case 2:
       case 3:
@@ -26,14 +28,14 @@ export class ForgedRoll {
         this.result = RollResult.partial;
         break;
       case 6:
-        if (this.roll.filter((x) => x === 6).length >= 2) {
-          this.result = RollResult.critical;
-        } else {
+        if (this.dice.indexOf(6) === this.dice.lastIndexOf(6)) {
           this.result = RollResult.success;
+        } else {
+          this.result = RollResult.critical;
         }
         break;
       default:
-        throw new Error("Invalid roll: " + this.roll);
+        throw new Error("Invalid roll: " + this.dice);
     }
   }
 }
