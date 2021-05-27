@@ -1,5 +1,3 @@
-import npcSheet from "../templates/npc-sheet.hbs"
+import npcSheet from "../templates/npc-sheet.hbs";
 
-export {
-    npcSheet
-}
+export { npcSheet };

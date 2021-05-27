@@ -1,2 +1,2 @@
-import "./index"
-import "./e2etests/index"
+import "./index";
+import "./e2etests/index";
