@@ -73,9 +73,9 @@ export class ForgedItemSheet extends ItemSheet<{ isGm: boolean }> {
   /* -------------------------------------------- */
 
   /** @override */
-  async getData() {
-    const data = await super.getData();
-    data.isGm = !!game.user?.isGM;
+  getData() {
+    const data = super.getData();
+    data.data.isGm = !!game.user?.isGM;
     return data;
   }
 }

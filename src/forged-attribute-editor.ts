@@ -1,9 +1,6 @@
 import attributes from "../templates/settings/attributes.hbs";
 
-export class AttributesEditor extends FormApplication<
-  FormApplication.Options,
-  { number: number }
-> {
+export class AttributesEditor extends FormApplication<{ number: number }> {
   static get defaultOptions() {
     const options = FormApplication.defaultOptions;
     options.template = attributes;
@@ -21,8 +18,8 @@ export class AttributesEditor extends FormApplication<
   }
 
   protected async _updateObject(
-    event: Event,
-    formData?: { groups: string }
+    event: Event | JQuery.Event,
+    formData: { groups: string }
   ): Promise<unknown> {
     event.preventDefault();
     const a = formData?.groups;

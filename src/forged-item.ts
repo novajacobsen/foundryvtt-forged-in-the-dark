@@ -4,7 +4,7 @@ export interface ForgedItemInnerData {
   quality: number;
 }
 
-export class ForgedItem extends Item<Item.Data<ForgedItemInnerData>> {
+export class ForgedItem extends Item<ForgedItemInnerData> {
   /* override */
   prepareData() {
     super.prepareData();
@@ -25,10 +25,10 @@ export class ForgedItem extends Item<Item.Data<ForgedItemInnerData>> {
   _prepareCohort() {
     let quality = 0;
     let scale = 0;
-
+/*
     // Adds Scale and Quality
     if (this.actor) {
-      switch (this.data.data.cohort[0]) {
+      switch (this.data.data.data.cohort[0]) {
         case "Gang":
           scale = parseInt(this.actor.data.data.tier[0]);
           quality = parseInt(this.actor.data.data.tier[0]);
@@ -42,5 +42,7 @@ export class ForgedItem extends Item<Item.Data<ForgedItemInnerData>> {
 
     this.data.data.scale = scale;
     this.data.data.quality = quality;
+
+    */
   }
 }

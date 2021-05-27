@@ -2,7 +2,7 @@ export const getAllItemsByType = async (type: string) => {
   const pack_items =
     (
       await game.packs?.find((e) => e.metadata.name === type)?.getContent()
-    )?.map((x) => x.data) || [];
+    )?.map((x: any) => x.data as Entity.Data) || [];
   const game_items =
     game.items
       ?.filter((x) => x.type === type)

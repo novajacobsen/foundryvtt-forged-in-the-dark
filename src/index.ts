@@ -3,6 +3,7 @@ import { ForgedItemSheet } from "./forged-item-sheet";
 import { preloadHandlebarsTemplates } from "./forged-templates";
 
 Hooks.once("init", async () => {
+  // @ts-ignore
   CONFIG.Item.entityClass = ForgedItem;
 
   Items.unregisterSheet("core", ItemSheet);
@@ -33,6 +34,7 @@ Hooks.once("init", async () => {
       if (typeof selected !== "undefined") {
         selected.forEach((selected_value) => {
           if (selected_value !== false) {
+            // @ts-ignore
             const escapedValue = RegExp.escape(
               Handlebars.escapeExpression(selected_value)
             );

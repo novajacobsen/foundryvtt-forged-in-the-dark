@@ -1,36 +1,31 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "module": "es6",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "rootDir": "src",
-        "outDir": "build",
-        "moduleResolution": "node",
-        "lib": [
-            "ESNext.String",
-            "dom",
-            "es2015.collection",
-            "es2017",
-            "es5",
-            "scripthost",
-        ],
-        "types": [
-            "@league-of-foundry-developers/foundry-vtt-types",
-            "@types/mocha"
-        ],
-    },
-    "include": [
-        "./**/*"
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "moduleResolution": "node",
+    "lib": [
+      "ESNext.String",
+      "dom",
+      "es2015.collection",
+      "es2017",
+      "es5",
+      "scripthost"
     ],
-    "exclude": [
-        "./tests/",
-        "./node_modules/",
-        "./dist/",
-        "./build/",
-        "webpack.config.js",
-        "_src"
-      ],
+    "types": ["foundry-pc-types", "@types/mocha"]
+  },
+  "include": ["./**/*"],
+  "exclude": [
+    "./tests/",
+    "./node_modules/",
+    "./dist/",
+    "./build/",
+    "webpack.config.js",
+    "_src"
+  ]
 }
