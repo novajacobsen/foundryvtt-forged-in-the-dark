@@ -1,9 +1,9 @@
-import attributes from "../templates/settings/attributes.hbs";
+import template from "./attributes.hbs";
 
-export class AttributesEditor extends FormApplication<{ number: number }> {
+class AttributesEditor extends FormApplication<{ number: number }> {
   static get defaultOptions() {
     const options = FormApplication.defaultOptions;
-    options.template = attributes;
+    options.template = template;
     return options;
   }
 
@@ -28,3 +28,11 @@ export class AttributesEditor extends FormApplication<{ number: number }> {
     return null;
   }
 }
+
+export const attributes = {
+  name: "Attributes",
+  label: "Configure Attributes",
+  icon: "fas fa-edit",
+  type: AttributesEditor,
+  restricted: true,
+};

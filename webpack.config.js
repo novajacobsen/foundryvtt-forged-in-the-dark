@@ -24,7 +24,7 @@ fs.writeFileSync(path.resolve(out, "styles", "styles.css"), sass.renderSync({
 }).css)
 
 module.exports = {
-    entry: mode === "development" ? "./src/dev_index.ts" : "./src/index.ts",
+    entry: mode === "development" ? "./src/dev_index.ts" : "./src/prod_index.ts",
     mode,
     module: {
         rules: [

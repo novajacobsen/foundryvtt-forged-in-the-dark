@@ -1,2 +1,2 @@
-import "./index";
+import "./forged/index";
 import "./e2etests/index";
