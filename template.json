@@ -1,0 +1,26 @@
+{
+  "Actor": {
+    "types": ["character", "faction"],
+    "templates": {},
+    "character": {
+      "playbook": {},
+      "heritage": {},
+      "background": {},
+      "attributes": {},
+      "special abilities": [],
+      "harm": {
+        "light": ["",""],
+        "medium": ["",""],
+        "heavy": [""],
+        "deadly": [""]
+      }
+    },
+    "faction": {
+
+    }
+  },
+  "Item": {
+    "types": [],
+    "templates": {}
+  }
+}

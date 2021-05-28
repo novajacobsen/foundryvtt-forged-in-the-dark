@@ -1,0 +1,132 @@
+{
+  "name": "forged-in-the-dark",
+  "title": "Forged in the Dark",
+  "description": "Forged in the dark game system.",
+  "version": "2.17",
+  "minimumCoreVersion": "0.7.2",
+  "compatibleCoreVersion": "0.7.9",
+  "templateVersion": 1,
+  "author": "megastruktur",
+  "esmodules": [
+    "index.js"
+  ],
+  "styles": [
+    "styles/styles.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Russian",
+      "path": "lang/ru.json"
+    },
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polish",
+      "path": "lang/pl.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "url": "https://github.com/NovaJacobsen/foundryvtt-forged-in-the-dark",
+  "manifest": "https://raw.githubusercontent.com/NovaJacobsen/foundryvtt-forged-in-the-dark/master/static/system.json",
+  "download": "https://codeload.github.com/NovaJacobsen/foundryvtt-forged-in-the-dark/zip/refs/heads/build",
+  "packs": [
+    {
+      "name": "class",
+      "label": "Classes",
+      "system": "forged-in-the-dark",
+      "path": "./packs/classes.db",
+      "entity": "Item"
+    },
+    {
+      "name": "heritage",
+      "label": "Heritages",
+      "system": "forged-in-the-dark",
+      "path": "./packs/heritages.db",
+      "entity": "Item"
+    },
+    {
+      "name": "vice",
+      "label": "Vices",
+      "system": "forged-in-the-dark",
+      "path": "./packs/vices.db",
+      "entity": "Item"
+    },
+    {
+      "name": "background",
+      "label": "Backgrounds",
+      "system": "forged-in-the-dark",
+      "path": "./packs/backgrounds.db",
+      "entity": "Item"
+    },
+    {
+      "name": "item",
+      "label": "Items",
+      "system": "forged-in-the-dark",
+      "path": "./packs/items.db",
+      "entity": "Item"
+    },
+    {
+      "name": "ability",
+      "label": "Abilities",
+      "system": "forged-in-the-dark",
+      "path": "./packs/abilities.db",
+      "entity": "Item"
+    },
+    {
+      "name": "crew_reputation",
+      "label": "Crew Reputation",
+      "system": "forged-in-the-dark",
+      "path": "./packs/crew_reputation.db",
+      "entity": "Item"
+    },
+    {
+      "name": "crew_type",
+      "label": "Crew Types",
+      "system": "forged-in-the-dark",
+      "path": "./packs/crew_types.db",
+      "entity": "Item"
+    },
+    {
+      "name": "crew_upgrade",
+      "label": "Crew Upgrades",
+      "system": "forged-in-the-dark",
+      "path": "./packs/crew_upgrades.db",
+      "entity": "Item"
+    },
+    {
+      "name": "crew_ability",
+      "label": "Crew Abilities",
+      "system": "forged-in-the-dark",
+      "path": "./packs/crew_abilities.db",
+      "entity": "Item"
+    },
+	{
+      "name": "faction",
+      "label": "Factions",
+      "system": "forged-in-the-dark",
+      "path": "./packs/factions.db",
+      "entity": "Item"
+    },
+    {
+      "name": "npc",
+      "label": "NPCs",
+      "system": "forged-in-the-dark",
+      "path": "./packs/npcs.db",
+      "entity": "Actor"
+    }
+  ]
+}
