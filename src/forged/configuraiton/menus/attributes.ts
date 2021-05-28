@@ -1,6 +1,7 @@
+import { Attributes } from "../Attributes";
 import template from "./attributes.hbs";
 
-class AttributesEditor extends FormApplication<{ number: number }> {
+class AttributesEditor extends FormApplication<Attributes> {
   static get defaultOptions() {
     const options = FormApplication.defaultOptions;
     options.template = template;
@@ -11,10 +12,8 @@ class AttributesEditor extends FormApplication<{ number: number }> {
     return "Test attribute Editor";
   }
 
-  getData(): { number: number } {
-    return {
-      number: game.settings.get("forged-in-the-dark", "groupCount") as number,
-    };
+  getData(): Attributes {
+    return game.settings.get("forged-in-the-dark", "Attributes")
   }
 
   protected async _updateObject(
@@ -22,9 +21,10 @@ class AttributesEditor extends FormApplication<{ number: number }> {
     formData: { groups: string }
   ): Promise<unknown> {
     event.preventDefault();
-    const a = formData?.groups;
+    //const a = formData?.groups;
+    
 
-    await game.settings.set("forged-in-the-dark", "groupCount", a);
+    //await game.settings.set("forged-in-the-dark", "Attributes", a);
     return null;
   }
 }

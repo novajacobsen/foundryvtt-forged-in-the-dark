@@ -3,8 +3,8 @@ export const attributes = {
   scope: "world",
   type: Object,
   default: {
-    insight: ["Hunt", "Study", "Survey", "Tinker"],
-    prowess: ["Finesse", "Prowl", "Skirmish", "Wreck"],
-    resolve: ["Attune", "Command", "Consort", "Sway"],
+    Insight: ["Hunt", "Study", "Survey", "Tinker"],
+    Prowess: ["Finesse", "Prowl", "Skirmish", "Wreck"],
+    Resolve: ["Attune", "Command", "Consort", "Sway"],
   },
 };

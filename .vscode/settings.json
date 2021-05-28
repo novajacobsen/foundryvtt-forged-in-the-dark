@@ -5,7 +5,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/node_modules": true,
-    "**/dist": true,
+    
     "**/.swp": true,
     "**/.DS_Store": true
   },
