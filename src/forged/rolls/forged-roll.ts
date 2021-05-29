@@ -9,13 +9,20 @@ export class ForgedRoll {
   result: RollResult;
   dice: number[];
 
-  constructor(diceCount: number) {
+  constructor(parms: { diceCount: number; results?: number[] }) {
     const d = new Die({
-      number: diceCount || 2,
-      faces: 6,
-      modifiers: [diceCount ? "kh" : "kl"],
-    }).evaluate();
+      number: parms.diceCount || 2,
+    })
+    d.evaluate();
+
+    if (parms.results) {
+      parms.results.forEach((r, i) => {
+        d.results[i].result = r
+      })
+    }
+
     this.dice = d.values;
+    d.keep(parms.diceCount ? 'kh': 'kl')    
 
     switch (d.total) {
       case 1:

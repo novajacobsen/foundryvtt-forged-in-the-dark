@@ -21,10 +21,7 @@ class AttributesEditor extends FormApplication<Attributes> {
     formData: { groups: string }
   ): Promise<unknown> {
     event.preventDefault();
-    //const a = formData?.groups;
     
-
-    //await game.settings.set("forged-in-the-dark", "Attributes", a);
     return null;
   }
 }
