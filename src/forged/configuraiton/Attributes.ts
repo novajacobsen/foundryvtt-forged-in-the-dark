@@ -1,3 +1,10 @@
 export interface Attributes {
-  [key: string]: string[];
+  [guid: string]: string;
+}
+
+export interface Categories {
+  [guid: string]: {
+    name: string;
+    attributes: Attributes;
+  };
 }
