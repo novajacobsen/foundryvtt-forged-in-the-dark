@@ -1,5 +1,4 @@
-import { settings } from "../configuraiton/settings";
-import { menus } from "../configuraiton/menus";
+import { settings, menus } from "../configuraiton";
 
 export const registerSystemSettings = () => {
   console.log("Registering system settings");

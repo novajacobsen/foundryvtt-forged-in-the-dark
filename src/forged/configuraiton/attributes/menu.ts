@@ -1,5 +1,5 @@
-import { Attributes } from "../Attributes";
-import template from "./attributes.hbs";
+import { Attributes } from "./model";
+import template from "./menu.hbs";
 
 class AttributesEditor extends FormApplication<Attributes> {
   static get defaultOptions() {
@@ -29,7 +29,7 @@ class AttributesEditor extends FormApplication<Attributes> {
   }
 }
 
-export const attributes = {
+export const menu = {
   name: "Attributes",
   label: "Configure Attributes",
   icon: "fas fa-edit",

@@ -1,4 +1,4 @@
-import { Categories } from "../Attributes";
+import { Categories } from "./model";
 
 const d: Categories = {
   "e95e16b0-a1bb-4af8-ae19-28d656aec023": {
@@ -30,7 +30,7 @@ const d: Categories = {
   },
 };
 
-export const attributes = {
+export const setting = {
   name: "Attributes",
   scope: "world",
   type: Object,
