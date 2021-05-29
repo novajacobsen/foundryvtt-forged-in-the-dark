@@ -1,0 +1,47 @@
+<h2> Setup Attributes</h2>
+
+<div class="form-description">
+  <form id="forged-attributes" onsubmit="event.preventDefault();">
+    <div class="form-content">
+      {{#each this}}
+        <input
+          class="setup-config"
+          type="text"
+          name="group{{@index}}"
+          value="{{@key}}"
+        />
+        <ul>
+          {{#each this}}
+            <li>
+              <input
+                class="setup-config"
+                type="text"
+                name="value{{@index}}"
+                value="{{this}}"
+              />
+            </li>
+          {{/each}}
+        </ul>
+        <button
+            onclick="((e, event) => {
+              event.preventDefault();
+              let ul = e.parentElement.children[1];
+              window.getComputedStyle(ul)
+              let children = ul.children;
+              let n = children[children.length-1].children[0].name.substring(5) - 0;
+              n++;
+              ul.innerHTML += `
+                <li><input
+                  class='setup-config'
+                  type='text'
+                  name='value` + n + `'
+                  value='empty'
+                /></li>
+              `;
+            })(this, event)"
+          >+</button>
+      {{/each}}
+    </div>
+    <button id="submit" type="submit">Save</button>
+  </form>
+</div>
