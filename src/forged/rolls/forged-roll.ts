@@ -1,30 +1,27 @@
-export enum RollResult {
-  critical,
-  success,
-  partial,
-  failure,
-}
+import { RollResult } from "./roll-result";
+
+export type d6 = 1 | 2 | 3 | 4 | 5 | 6
 
 export class ForgedRoll {
-  result: RollResult;
-  dice: number[];
-
-  constructor(parms: { diceCount: number; results?: number[] }) {
+  result: RollResult
+  dice: d6[];
+  total: d6;
+  constructor(diceCount: number, parms?: { results: number[] }) {
     const d = new Die({
-      number: parms.diceCount || 2,
-    })
+      number: diceCount || 2,
+    });
     d.evaluate();
-
-    if (parms.results) {
+    
+    if (parms) {
       parms.results.forEach((r, i) => {
-        d.results[i].result = r
-      })
+        d.results[i].result = r;
+      });
     }
+    this.dice = d.values as d6[];
+    d.keep(diceCount ? "kh" : "kl");
+    this.total = d.total as d6;
 
-    this.dice = d.values;
-    d.keep(parms.diceCount ? 'kh': 'kl')    
-
-    switch (d.total) {
+    switch (this.total) {
       case 1:
       case 2:
       case 3:
@@ -41,8 +38,6 @@ export class ForgedRoll {
           this.result = RollResult.critical;
         }
         break;
-      default:
-        throw new Error("Invalid roll: " + this.dice);
     }
   }
 }
