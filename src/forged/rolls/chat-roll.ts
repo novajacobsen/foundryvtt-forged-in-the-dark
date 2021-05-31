@@ -1,7 +1,7 @@
 import template from "./action-roll.hbs";
-import { ActionRoll } from "./action-roll";
+import { Roll } from "./action-roll";
 
-export const chat = async (roll: ActionRoll) => {
+export const chat = async (roll: Roll) => {
   console.log("fooo");
   console.log(template);
   let content = await renderTemplate(template, roll.binding);
