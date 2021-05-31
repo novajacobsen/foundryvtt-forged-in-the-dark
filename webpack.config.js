@@ -14,14 +14,15 @@ if (fs.existsSync(out)) {
 }
 
 fs.mkdirSync(out);
-fs.mkdirSync(path.resolve(out, "styles"));
 
+let scssResult = sass.renderSync({
+  file: "scss/style.scss",
+  sourceMap: true,
+  outFile: path.resolve(out, "index.css")
+})
 
-fs.writeFileSync(path.resolve(out, "styles", "styles.css"), sass.renderSync({
-    file: "scss/style.scss",
-    sourceMap: true,
-    outFile: path.resolve(out, "styles", "styles.css")
-}).css)
+fs.writeFileSync(path.resolve(out, "index.css"), scssResult.css)
+fs.writeFileSync(path.resolve(out, "index.css.map"), scssResult.map)
 
 module.exports = {
     entry: mode === "development" ? "./src/dev_index.ts" : "./src/prod_index.ts",

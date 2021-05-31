@@ -1,12 +1,12 @@
 @use "sass:math";
 
 // Colors
-$lightgray: #CCC;
+$lightgray: #ccc;
 $gray: #999;
 $red: red;
 $almost_black: #191813;
-$almost_white: #EEEFFF;
-$gold: #DAA520;
+$almost_white: #eeefff;
+$gold: #daa520;
 $green: #008000;
 $light_green: #12a012;
 $blue: #04578f;
@@ -17,7 +17,7 @@ $hover-opacity: 0.9;
 $hover-brightness: 0.8;
 
 // Imports
-@import 'mixin.scss';
+@import "mixin.scss";
 
 /*
  * General Styles
@@ -53,7 +53,7 @@ $hover-brightness: 0.8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     > *:not(.label-stripe) {
       margin-right: 10px;
 
@@ -195,7 +195,6 @@ $hover-brightness: 0.8;
   // Stress and Trauma
 
   .big-teeth-section {
-
     border-top: 3px solid $almost_black;
     display: flex;
     flex-direction: row;
@@ -215,14 +214,24 @@ $hover-brightness: 0.8;
 
     // Stress
     .big-teeth {
-      @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+      @include toothradio(
+        17px,
+        50px,
+        "assets/teeth/stresstooth-halfgrey.png",
+        "assets/teeth/stresstooth-red.png"
+      );
     }
 
     /* Trauma */
     .small-teeth-container {
-
       .small-teeth-wrap {
-        @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png", false);
+        @include toothradio(
+          17px,
+          50px,
+          "assets/teeth/shorttooth-grey.png",
+          "assets/teeth/shorttooth-red.png",
+          false
+        );
         flex-direction: column;
 
         .small-teeth {
@@ -237,7 +246,6 @@ $hover-brightness: 0.8;
       justify-content: space-between;
       align-items: flex-start;
     }
-
   }
 
   #character-stress {
@@ -249,7 +257,8 @@ $hover-brightness: 0.8;
   }
 
   //Abilitiers and loadout
-  #abilities, #loadout {
+  #abilities,
+  #loadout {
     .item-name {
       width: 100px;
     }
@@ -269,7 +278,7 @@ $hover-brightness: 0.8;
       }
     }
   }
-  
+
   // Loadout
   #loadout {
     .item-add-popup {
@@ -279,35 +288,38 @@ $hover-brightness: 0.8;
 
   // Experience teeth
   .teeth-experience {
-    @include toothradio(10px, 30px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+    @include toothradio(
+      10px,
+      30px,
+      "assets/teeth/stresstooth-halfgrey.png",
+      "assets/teeth/stresstooth-red.png"
+    );
     position: absolute;
     top: 0px;
     right: 10px;
   }
 
   #harm-armor {
-    
     display: flex;
 
     // Harm
     #character-harm {
-  
       width: 100%;
-  
+
       table {
         width: 100%;
-  
+
         th {
           background-color: $almost_black;
           color: $almost_white;
         }
-  
+
         input[type="text"] {
           width: 100%;
         }
       }
     }
-  
+
     // Clock
     #character-health-clock {
       margin: 0 auto;
@@ -315,7 +327,6 @@ $hover-brightness: 0.8;
     }
 
     #character-armor-uses {
-
       div {
         display: flex;
         flex-direction: row;
@@ -324,9 +335,7 @@ $hover-brightness: 0.8;
     }
   }
 
-
   #attributes {
-
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -347,18 +356,22 @@ $hover-brightness: 0.8;
       letter-spacing: 1px;
     }
     .attributes-exp {
-
       position: relative;
       margin-bottom: 10px;
 
       .stripe-tooth-body {
-        @include toothradio(10px, 30px, "assets/teeth/xptooth-white.png", "assets/teeth/xptooth-red.png");
+        @include toothradio(
+          10px,
+          30px,
+          "assets/teeth/xptooth-white.png",
+          "assets/teeth/xptooth-red.png"
+        );
         position: absolute;
         top: 0px;
         right: 0px;
       }
     }
-    
+
     .attributes-container {
       display: flex;
       margin: 3px 0px;
@@ -372,16 +385,14 @@ $hover-brightness: 0.8;
 
   // ITEM
   .item {
-
     justify-content: space-between;
 
     .item-body {
-  
       margin-bottom: 10px;
       * {
         margin-right: 10px;
       }
-  
+
       .item-description {
         font-style: italic;
         text-align: justify;
@@ -399,7 +410,7 @@ $hover-brightness: 0.8;
       width: 100px;
     }
   }
-    
+
   .item-class-label {
     margin-bottom: 10px;
   }
@@ -425,7 +436,11 @@ $hover-brightness: 0.8;
         border-width: 2px;
       }
 
-      @include changeable($transition-period, $hover-brightness, $hover-opacity);
+      @include changeable(
+        $transition-period,
+        $hover-brightness,
+        $hover-opacity
+      );
     }
 
     &.coins-hands {
@@ -435,9 +450,8 @@ $hover-brightness: 0.8;
     &.coins-stashed {
       width: 190px;
     }
-    
   }
-  
+
   // Crew Coins
   .crew-coins {
     @include custom_radio_square($coin_size);
@@ -450,11 +464,15 @@ $hover-brightness: 0.8;
     }
   }
 
-
   // Reputation
   #crew-reputation {
     border-top: 3px solid $almost_black;
-    @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+    @include toothradio(
+      17px,
+      50px,
+      "assets/teeth/stresstooth-halfgrey.png",
+      "assets/teeth/stresstooth-red.png"
+    );
 
     input[disabled="disabled"] + label {
       background-image: url(assets/teeth/stresstooth-black.png);
@@ -469,7 +487,6 @@ $hover-brightness: 0.8;
   }
 
   #turf-list {
-
     display: flex;
     flex-direction: column;
     width: 855px;
@@ -486,7 +503,7 @@ $hover-brightness: 0.8;
         margin-right: 0px;
       }
     }
-  
+
     &.section-non-editable {
       .turf-block {
         @include turf_block(130px, 100px);
@@ -502,12 +519,16 @@ $hover-brightness: 0.8;
 
   #crew-hold {
     border-top: 3px solid $almost_black;
-    @include toothradio_single(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+    @include toothradio_single(
+      17px,
+      50px,
+      "assets/teeth/stresstooth-halfgrey.png",
+      "assets/teeth/stresstooth-red.png"
+    );
     width: 221px;
   }
 
   #crew-tier {
-
     background-color: $gray;
     height: 33px;
     width: 145px;
@@ -520,7 +541,6 @@ $hover-brightness: 0.8;
     > * {
       margin-right: 5px;
     }
-      
   }
 
   #heat-wanted {
@@ -562,23 +582,18 @@ $hover-brightness: 0.8;
 
   // Cohorts styling
   .edgeflaw {
-
     input {
       display: none;
 
       &:checked {
-
         & + label {
           color: $red;
         }
-
       }
     }
-
   }
 
   #gang-expert-type-selector {
-
     #gang-type-boxes {
       flex-wrap: wrap;
     }
@@ -586,7 +601,7 @@ $hover-brightness: 0.8;
 
   .cohorts {
     flex-wrap: wrap;
-    
+
     .cohort-block-wrapper {
       width: 400px;
     }
@@ -601,12 +616,11 @@ $hover-brightness: 0.8;
     }
 
     .cohort-block-harm {
-
       justify-content: space-around;
 
       input[type="radio"] {
         display: none;
-  
+
         &:checked + label {
           color: $almost_white;
           font-weight: bold;
@@ -624,7 +638,6 @@ $hover-brightness: 0.8;
 
   // Add Items modal styling.
   #items-to-add {
-
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -642,7 +655,6 @@ $hover-brightness: 0.8;
 
   // Tooltip.
   .tooltip {
-
     .tooltiptext {
       visibility: hidden;
       width: 200px;
@@ -651,7 +663,7 @@ $hover-brightness: 0.8;
       text-align: center;
       padding: 5px;
       border-radius: 6px;
-     
+
       // Position
       position: absolute;
       z-index: 9999;
@@ -662,30 +674,26 @@ $hover-brightness: 0.8;
     }
   }
 
-  .forged-die-tooltip {
+  .die {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: large;
 
-    .die {
-      font-weight: bold;
-      text-transform: capitalize;
-      font-size: large;
-
-      &.critical-success {
-        color: $light_green;
-      }
-
-      &.success {
-        color: $green;
-      }
-
-      &.partial-success {
-        color: $blue;
-      }
-
-      &.failure {
-        color: $red;
-      }
+    &.critical-success {
+      color: $light_green;
     }
 
+    &.success {
+      color: $green;
+    }
+
+    &.partial-success {
+      color: $blue;
+    }
+
+    &.failure {
+      color: $red;
+    }
   }
 
   .clock-zero-label {
@@ -715,7 +723,12 @@ $hover-brightness: 0.8;
 
   i {
     &.nullifier {
-      @include changeable($transition-period, $hover-brightness, $hover-opacity, $red);
+      @include changeable(
+        $transition-period,
+        $hover-brightness,
+        $hover-opacity,
+        $red
+      );
     }
   }
 
@@ -727,7 +740,8 @@ $hover-brightness: 0.8;
       box-shadow: none;
       border: none;
       cursor: pointer;
-      background: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right;
+      background: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+        no-repeat right;
       padding: 0 20px 0 0;
       margin: 0.1em -6px 0 0;
       background-color: $almost_black;
