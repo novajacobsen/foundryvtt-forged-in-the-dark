@@ -1,0 +1,19 @@
+<div class="dice-tooltip blades-die-tooltip">
+  {{#if attribute}}<div class="chat-label label-stripe-chat">{{attribute}}</div>{{/if}}
+  {{#if position}}
+    <div class="chat-label-small label-stripe-chat-small">
+      {{{position}}} | {{{effect}}}
+    </div>
+  {{/if}}
+
+  <div class="die {{result}}">{{result}}</div>
+  <div class="description">
+    <p>{{{description}}}</p>
+  </div>
+
+  <ol class="dice-rolls">
+    {{#each dice}}
+    <li class="roll die d6 {{this.cls}}">{{{this.number}}}</li>
+    {{/each}}
+  </ol>
+</div>
