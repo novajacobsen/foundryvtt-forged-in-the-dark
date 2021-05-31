@@ -1,6 +1,7 @@
 import * as ActionRoll from "./rolls/action-roll";
 import { registerHooks } from "./hooks";
 import { chat } from "./rolls/chat-roll";
+import "../../scss/style.scss";
 
 registerHooks();
 
