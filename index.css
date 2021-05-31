@@ -87,7 +87,7 @@
 }
 * .black-label {
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   font-size: 21px;
   text-align: center;
   padding: 0px 5px;
@@ -105,7 +105,7 @@
 }
 * .chat-label {
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   font-size: 21px;
   text-align: center;
   padding: 0px 5px;
@@ -123,7 +123,7 @@
 * .label-stripe {
   text-transform: uppercase;
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   margin-bottom: 10px;
   position: relative;
   padding-left: 10px;
@@ -144,7 +144,7 @@
 * .label-stripe-chat {
   text-transform: uppercase;
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   margin-bottom: 10px;
   position: relative;
   padding-top: 3px;
@@ -209,7 +209,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 * .big-teeth-section .big-teeth label[for$="-0"] i {
   margin-top: 4px;
@@ -248,7 +248,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] i {
   margin-top: 4px;
@@ -301,13 +301,16 @@
 * #character-stress label[for$="-0"] {
   margin-right: 0px;
 }
-* #abilities .item-name, * #loadout .item-name {
+* #abilities .item-name,
+* #loadout .item-name {
   width: 100px;
 }
-* #abilities .item-body, * #loadout .item-body {
+* #abilities .item-body,
+* #loadout .item-body {
   width: auto;
 }
-* #abilities .item-description, * #loadout .item-description {
+* #abilities .item-description,
+* #loadout .item-description {
   width: 260px;
 }
 * #abilities .label-stripe p:first-child {
@@ -340,7 +343,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 * .teeth-experience label[for$="-0"] i {
   margin-top: 4px;
@@ -369,7 +372,7 @@
 }
 * #harm-armor #character-harm table th {
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 * #harm-armor #character-harm table input[type=text] {
   width: 100%;
@@ -434,7 +437,7 @@
 }
 * #attributes .stripe {
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   font-size: 17px;
   padding-left: 5px;
 }
@@ -474,7 +477,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 * #attributes .attributes-exp .stripe-tooth-body label[for$="-0"] i {
   margin-top: 4px;
@@ -524,7 +527,7 @@
   display: none;
 }
 * #attributes .attributes-container input:checked ~ label {
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 * #attributes .attributes-container input:checked + label {
   transition: filter 0.1s;
@@ -577,7 +580,7 @@
 * .coins label {
   height: 15px;
   width: 15px;
-  background-color: #DAA520;
+  background-color: #daa520;
   vertical-align: middle;
   border: 1px solid #191813;
   transition: filter 0.1s;
@@ -594,10 +597,10 @@
   display: none;
 }
 * .coins input:checked ~ label {
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 * .coins input:checked + label {
-  background-color: #DAA520;
+  background-color: #daa520;
 }
 * .coins input ~ label {
   margin-right: 3px;
@@ -627,7 +630,7 @@
 * .crew-coins label {
   height: 15px;
   width: 15px;
-  background-color: #DAA520;
+  background-color: #daa520;
   vertical-align: middle;
   border: 1px solid #191813;
   transition: filter 0.1s;
@@ -644,10 +647,10 @@
   display: none;
 }
 * .crew-coins input:checked ~ label {
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 * .crew-coins input:checked + label {
-  background-color: #DAA520;
+  background-color: #daa520;
 }
 * .crew-coins label {
   margin-right: 3px;
@@ -675,7 +678,7 @@
   width: auto;
   height: auto;
   background-image: none !important;
-  color: #EEEFFF;
+  color: #eeefff;
 }
 * #crew-reputation label[for$="-0"] i {
   margin-top: 4px;
@@ -721,7 +724,7 @@
   cursor: pointer;
   width: 130px;
   height: 100px;
-  background-color: #CCC;
+  background-color: #ccc;
   position: relative;
   margin: 20px;
   flex-grow: initial;
@@ -737,7 +740,7 @@
 * #turf-list.section-non-editable .turf-block .connector {
   position: absolute;
   display: block;
-  background-color: #CCC;
+  background-color: #ccc;
 }
 * #turf-list.section-non-editable .turf-block .connector.right, * #turf-list.section-non-editable .turf-block .connector.left {
   width: 40px;
@@ -792,7 +795,7 @@
   cursor: pointer;
   width: 130px;
   height: 125px;
-  background-color: #CCC;
+  background-color: #ccc;
   position: relative;
   margin: 20px;
   flex-grow: initial;
@@ -808,7 +811,7 @@
 * #turf-list.section-editable .turf-block .connector {
   position: absolute;
   display: block;
-  background-color: #CCC;
+  background-color: #ccc;
 }
 * #turf-list.section-editable .turf-block .connector.right, * #turf-list.section-editable .turf-block .connector.left {
   width: 40px;
@@ -920,7 +923,7 @@
 }
 * #crew-tier input:checked ~ label:not([for$="-0"]) {
   border-color: gray;
-  background-color: #EEEFFF;
+  background-color: #eeefff;
 }
 * #crew-tier input:checked + label:not([for$="-0"]) {
   background-color: #191813;
@@ -987,7 +990,7 @@
   display: none;
 }
 * .cohorts .cohort-block-harm input[type=radio]:checked + label {
-  color: #EEEFFF;
+  color: #eeefff;
   font-weight: bold;
   background-color: #191813;
 }
@@ -1014,7 +1017,7 @@
   visibility: hidden;
   width: 200px;
   background-color: #191813;
-  color: #EEEFFF;
+  color: #eeefff;
   text-align: center;
   padding: 5px;
   border-radius: 6px;
@@ -1024,21 +1027,21 @@
 * .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-* .forged-die-tooltip .die {
+* .die {
   font-weight: bold;
   text-transform: capitalize;
   font-size: large;
 }
-* .forged-die-tooltip .die.critical-success {
+* .die.critical-success {
   color: #12a012;
 }
-* .forged-die-tooltip .die.success {
+* .die.success {
   color: #008000;
 }
-* .forged-die-tooltip .die.partial-success {
+* .die.partial-success {
   color: #04578f;
 }
-* .forged-die-tooltip .die.failure {
+* .die.failure {
   color: red;
 }
 * .clock-zero-label {
@@ -1241,4 +1244,4 @@
   color: red;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.css.map */
