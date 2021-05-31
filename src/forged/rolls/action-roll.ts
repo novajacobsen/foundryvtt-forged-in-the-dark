@@ -7,6 +7,7 @@ export interface Binding {
   position: string;
   effect: string;
   dice: { cls: string; number: number }[];
+  diceCount: number;
 }
 
 export class Roll {
@@ -15,6 +16,7 @@ export class Roll {
   private position: string;
   private effect: string;
   private dice: { cls: string; number: number }[];
+  private diceCount: number;
 
   get binding(): Binding {
     return {
@@ -22,7 +24,8 @@ export class Roll {
       result: this.result,
       position: this.position,
       effect: this.effect,
-      dice: this.dice,
+      dice: this.dice.sort((a, b) => b.number - a.number),
+      diceCount: this.diceCount,
     };
   }
   constructor(_roll: number | ForgedRoll, position: Position, effect: Effect) {
@@ -33,11 +36,21 @@ export class Roll {
       roll = _roll;
     }
     this.result = roll.result;
+    this.diceCount = roll.diceCount;
     this.description = position.description(this.result);
     this.effect = effect;
     this.position = position.position;
     this.dice = roll.dice.map((v) => {
-      return { cls: v === roll.total ? "" : "discarded", number: v };
+      let cls = "discarded";
+      if (v === roll.total) {
+        cls =
+          roll.result === RollResult.critical
+            ? "max"
+            : roll.result === RollResult.failure
+            ? "min"
+            : "";
+      }
+      return { cls, number: v };
     });
   }
 }
@@ -53,9 +66,9 @@ export abstract class Position {
     return new Desperate();
   }
   public abstract position: string;
-  protected successDescription: string =
+  protected criticalDescription: string =
     "You do it with <b>increased effect</b>.";
-  protected criticalDescription: string = "You do it.";
+  protected successDescription: string = "You do it.";
   protected abstract partialDescription: string;
   protected abstract failureDescription: string;
 
