@@ -1,17 +1,19 @@
 import { RollResult } from "./roll-result";
 
-export type d6 = 1 | 2 | 3 | 4 | 5 | 6
+export type d6 = 1 | 2 | 3 | 4 | 5 | 6;
 
 export class ForgedRoll {
-  result: RollResult
+  result: RollResult;
   dice: d6[];
   total: d6;
+  diceCount: number;
   constructor(diceCount: number, parms?: { results: number[] }) {
+    this.diceCount = diceCount
     const d = new Die({
       number: diceCount || 2,
     });
     d.evaluate();
-    
+
     if (parms) {
       parms.results.forEach((r, i) => {
         d.results[i].result = r;
